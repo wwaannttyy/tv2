@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boosts</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="score">
+                💰 <span id="score">0</span>
+            </div>
+        </div>
+        <div class="boosts-container">
+            <button id="full-tank" onclick="fullTank()">Full Tank</button>
+            <button id="boost" disabled>Soon</button>
+            <button id="multitap" onclick="upgradeMultitap()">Multitap</button>
+            <button id="energy-limit" onclick="upgradeEnergyLimit()">Energy Limit</button>
+            <button id="tapbot" onclick="activateTapbot()">Tapbot</button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+

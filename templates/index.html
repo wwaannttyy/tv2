@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicker Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container" id="clicker-page">
+        <div class="header">
+            <div class="score">
+                💰 <span id="score">0</span>
+            </div>
+        </div>
+        <div class="coin-container">
+            <div class="coin" id="coin">
+                💰
+            </div>
+        </div>
+        <div class="energy-bar-container">
+            ⚡ <span id="energy-count">1000</span>
+            <div class="energy-bar">
+                <div id="energy"></div>
+            </div>
+        </div>
+        <div class="menu">
+            <a href="javascript:void(0)" class="menu-item" onclick="showPage('referrals')">👥</a>
+            <a href="javascript:void(0)" class="menu-item" onclick="showPage('tasks')">🗒️</a>
+            <a href="javascript:void(0)" class="menu-item larger" onclick="showPage('clicker')">📋</a>
+            <a href="javascript:void(0)" class="menu-item" id="boosts-button">⚡</a>
+            <a href="javascript:void(0)" class="menu-item" onclick="showPage('wallet')">💼</a>
+        </div>
+    </div>
+
+    <div class="container" id="boosts-page" style="display:none;">
+        <div class="header">
+            <div class="score">
+                💰 <span id="balance-count">0</span>
+            </div>
+        </div>
+        <div class="boosts-container">
+            <button id="full-tank">Full Tank</button>
+            <button id="boost" disabled>Soon</button>
+            <button id="upgrade-multitap">Multitap (<span id="multitap-cost">0</span>)</button>
+            <button id="upgrade-energy-limit">Energy Limit (<span id="energy-limit-cost">0</span>)</button>
+            <button id="activate-tapbot">Tapbot (50000)</button>
+            <button id="back-to-clicker">Back</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
